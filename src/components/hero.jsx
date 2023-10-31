@@ -13,9 +13,11 @@ const Hero = () => {
             <span className="text-[#EFC3A4]"> Detection </span> System
           </h1>
           <div className="p-9 space-x-5">
-            <button className="m-1 border border-white bg-[#BE7656]/80 rounded-lg px-9 py-2 text-lg text-white hover:bg-white hover:text-black">
-              Scanning
-            </button>
+            <a href="/scan">
+              <button className="m-1 border border-white bg-[#BE7656]/80 rounded-lg px-9 py-2 text-lg text-white hover:bg-white hover:text-black">
+                Scanning
+              </button>
+            </a>
             <button className="m-1 border border-white bg-[#BE7656]/80 rounded-lg px-7 py-2 text-lg text-white hover:bg-white hover:text-black">
               Information
             </button>

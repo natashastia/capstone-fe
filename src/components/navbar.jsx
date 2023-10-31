@@ -11,17 +11,17 @@ const Navbar = () => {
       <div className="flex justify-between font-medium pt-2 mr-5 space-x-10 text-xl">
         <button className="hover:text-yellow-500">
           <a href="/" className="flex">
-            Beranda
+            Home
+          </a>
+        </button>
+        <button className="hover:text-yellow-500">
+          <a href="/scan" className="flex">
+            Scan
           </a>
         </button>
         <button className="hover:text-yellow-500">
           <a href="/" className="flex">
-            Pindai
-          </a>
-        </button>
-        <button className="hover:text-yellow-500">
-          <a href="/" className="flex">
-            Informasi
+            Information
           </a>
         </button>
       </div>
