@@ -1,136 +1,47 @@
 import React from "react";
 import Navbar from "../components/navbar.jsx";
+import DefectList from "../components/defectlist.jsx";
 
-const Hero = () => {
+const Result = () => {
+  const defectData = [
+    { name: "Biji Cokelat", percentage: "35%" },
+    { name: "Biji Hitam", percentage: "20%" },
+    { name: "Biji Muda", percentage: "15%" },
+    { name: "Biji Normal", percentage: "20%" },
+    { name: "Biji Pecah", percentage: "15%" },
+    { name: "Biji Muda", percentage: "15%" },
+    { name: "Biji Normal", percentage: "20%" },
+    { name: "Biji Pecah", percentage: "15%" },
+    { name: "Biji Muda", percentage: "15%" },
+    { name: "Biji Normal", percentage: "20%" },
+    { name: "Biji Pecah", percentage: "15%" },
+  ];
   return (
-    <div className="max-w-[1640px] mx-auto">
+    <div className="max-w-screen mx-auto">
       <Navbar />
-      <h1 className="text-xl font-bold text-center">Result</h1>
-      <div className="w-full h-screen relative bg-white">
-        <img
-          className="w-[827px] h-[736px] left-0 absolute"
-          src="https://images.pexels.com/photos/6936981/pexels-photo-6936981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="/"
-        />
-        <div className="w-[125.07px] h-[46.90px] left-[894px] top-[200px] absolute text-justify text-black text-3xl font-bold">
-          Durasi
+      <div className="w-screen h-screen flex flex-col items-center">
+        <div className="text-center text-black text-2xl font-bold mt-2">
+          Result
         </div>
-        <div className="w-[543px] h-[84px] left-[894px] top-[259px] absolute text-justify text-black text-xl font-normal">
-          Deteksi Objek: 2 detik
-          <br />
-          Klasifikasi: 1 detik
-        </div>
-        <div className="w-[263.82px] h-[46.90px] left-[894px] top-[357px] absolute text-justify text-black text-3xl font-bold font-['Montserrat']">
-          Jumlah Cacat
-        </div>
-        <div className="w-[183px] left-[894px] top-[746px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
+        <div className="flex flex-col md:flex-row lg:flex-row items-center">
+          <img
+            className="lg:w-[550px] lg:h-[550px] w-[300px] h-[300px] my-2 mx-4"
+            src="https://images.pexels.com/photos/6936981/pexels-photo-6936981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="/"
+          />
+          <div className="lg:w-[550px] lg:min-h-[550px] w-[300px] bg-black/10 rounded-lg border-2 border-black p-4">
+            <div className="text-black text-2xl font-bold">Duration</div>
+            <ul className="list-disc pl-6">
+              <li>Object Detection: 2s</li>
+              <li>Classification: 1s</li>
+            </ul>
+            <div className="text-black text-2xl font-bold mt-2">Defects</div>
+            <div className="font-bold text-base lg:text-xl pb-2 m-2 text-center">
+              Total Number of Defects: 5
+              <br />
+              Type of Quality: Mutu 1
             </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[894px] top-[854px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[1254px] top-[746.31px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[1254px] top-[854px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[894px] top-[530px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[894px] top-[638px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[1254px] top-[530.31px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[894px] top-[422px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[1254px] top-[422.31px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
-          </div>
-        </div>
-        <div className="w-[183px] left-[1254px] top-[638px] absolute">
-          <div className="w-[89.90px] h-[89.90px] left-0 top-0 absolute bg-yellow-950 rounded-full"></div>
-          <div className="w-16 h-[53px] left-[119px] top-[17.69px] absolute">
-            <div className="left-0 top-0 absolute text-justify text-black text-2xl font-bold font-['Inter']">
-              35%
-            </div>
-            <div className="left-0 top-[29px] absolute text-justify text-black text-xl font-normal font-['Inter']">
-              Normal
-            </div>
+            <DefectList data={defectData} />
           </div>
         </div>
       </div>
@@ -138,4 +49,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Result;
