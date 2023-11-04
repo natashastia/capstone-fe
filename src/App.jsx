@@ -3,6 +3,7 @@ import "./index.css";
 import Landing from "./pages/landing.jsx";
 import Scan from "./pages/scan.jsx";
 import Result from "./pages/result.jsx";
+import Information from "./pages/information";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/scan" element={<Scan />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/info" element={<Information />} />
       </Routes>
     </>
   );
