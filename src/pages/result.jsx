@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar.jsx";
 
-const Hero = () => {
+const Result = () => {
   return (
     <div className="max-w-[1640px] mx-auto">
       <Navbar />
@@ -138,4 +138,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Result;
