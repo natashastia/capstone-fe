@@ -3,7 +3,6 @@ import Navbar from "../components/navbar.jsx";
 import DefectList from "../components/defectlist.jsx";
 
 const Result = () => {
-<<<<<<< HEAD
   const defectData = [
     { name: "Biji Cokelat", percentage: "35%" },
     { name: "Biji Hitam", percentage: "20%" },
@@ -17,8 +16,6 @@ const Result = () => {
     { name: "Biji Normal", percentage: "20%" },
     { name: "Biji Pecah", percentage: "15%" },
   ];
-=======
->>>>>>> 98d4eec7302b0052e227f686b2bfc43a0435d924
   return (
     <div className="max-w-screen mx-auto">
       <Navbar />
