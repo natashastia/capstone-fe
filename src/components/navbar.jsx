@@ -27,7 +27,7 @@ const Navbar = () => {
             </a>
           </button>
           <button className="hover:text-yellow-500">
-            <a href="/" className="flex">
+            <a href="/info" className="flex">
               Information
             </a>
           </button>
