@@ -5,14 +5,13 @@ const InfoHeader = () => {
     <div className="max-w-[1640px] mx-auto">
       <div className="h-screen relative">
         <div className="absolute w-full h-full text-gray-200 bg-black/40 flex flex-col justify-center">
-          {/*Overlay*/}
           <h1 className="px-6 text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
             Coffee Bean
           </h1>
           <h1 className="px-6 text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
             Detection System
           </h1>
-          <div className="w-1/2 p-9 space-x-5">
+          <div className="w-full lg:w-1/2 p-9 space-x-5 font-medium">
             <p>
               Founded by a group of coffee aficionados with a deep-rooted love
               for the bean, This was born out of a desire to elevate the coffee

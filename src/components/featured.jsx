@@ -8,10 +8,10 @@ const Featured = () => {
     borderColor: "#BE7656",
   };
   return (
-    <div className="flex justify-center my-20 flex-col sm:flex-row">
+    <div className="flex justify-center my-20 flex-col sm:flex-row items-center">
       <div
         style={borderStyle}
-        className="w-full sm:w-1/3 p-4 border m-2 shadow-lg"
+        className="w-3/4 sm:w-1/3 p-4 border m-2 shadow-lg"
       >
         <div className="text-center">
           <FontAwesomeIcon
@@ -27,7 +27,7 @@ const Featured = () => {
       </div>
       <div
         style={borderStyle}
-        className="w-full sm:w-1/3 p-4 border m-2 shadow-lg"
+        className="w-3/4 sm:w-1/3 p-4 border m-2 shadow-lg"
       >
         <div className="text-center">
           <FontAwesomeIcon
@@ -43,7 +43,7 @@ const Featured = () => {
       </div>
       <div
         style={borderStyle}
-        className="w-full sm:w-1/3 p-4 border m-2 shadow-lg"
+        className="w-3/4 sm:w-1/3 p-4 border m-2 shadow-lg"
       >
         <div className="text-center">
           <FontAwesomeIcon

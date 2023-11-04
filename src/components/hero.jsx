@@ -18,7 +18,7 @@ const Hero = () => {
                 Scanning
               </button>
             </a>
-            <a href="/">
+            <a href="/info">
               <button className="m-1 border border-white bg-[#BE7656]/80 rounded-lg px-7 py-2 text-lg text-white hover:bg-white hover:text-black">
                 Information
               </button>
