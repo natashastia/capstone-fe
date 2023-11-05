@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar.jsx";
 import DefectList from "../components/defectlist.jsx";
+import { useLocation } from "react-router-dom";
 
 const Result = () => {
   const defectData = [
@@ -16,6 +17,8 @@ const Result = () => {
     { name: "Biji Normal", percentage: "20%" },
     { name: "Biji Pecah", percentage: "15%" },
   ];
+  const location = useLocation();
+  const capturedPhoto = location.state?.capturedPhoto;
   return (
     <div className="max-w-screen mx-auto">
       <Navbar />
@@ -24,11 +27,13 @@ const Result = () => {
           Result
         </div>
         <div className="flex flex-col md:flex-row lg:flex-row items-center">
-          <img
-            className="lg:w-[550px] lg:h-[550px] w-[300px] h-[300px] my-2 mx-4"
-            src="https://images.pexels.com/photos/6936981/pexels-photo-6936981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="/"
-          />
+          {capturedPhoto && (
+            <img
+              src={capturedPhoto}
+              alt="Captured"
+              className="lg:w-[550px] lg:h-[550px] w-[300px] h-[300px] my-2 mx-4"
+            />
+          )}
           <div className="lg:w-[550px] lg:min-h-[550px] w-[300px] bg-black/10 rounded-lg border-2 border-black p-4">
             <div className="text-black text-2xl font-bold">Duration</div>
             <ul className="list-disc pl-6">
