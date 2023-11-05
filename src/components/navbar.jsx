@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="lg:hidden block lg:flex justify-between bg-[#BE7656]/80 text-center space-x-10 font-medium text-xl">
+        <div className="lg:hidden block lg:flex justify-between bg-[#BE7656]/80 text-center space-x-10 font-medium text-xl duration-300">
           <button className="hover:text-white">
             <a href="/" className="block p-2">
               Home
@@ -51,7 +51,7 @@ const Navbar = () => {
             </a>
           </button>
           <button className="hover:text-white">
-            <a href="/" className="block p-2">
+            <a href="/info" className="block p-2">
               Information
             </a>
           </button>

@@ -2,9 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import Navbar from "../components/navbar.jsx";
 
 const Scan = () => {
+  const inputRef = useRef(null);
   const videoRef = useRef(null);
   const photoRef = useRef(null);
   const [hasPhoto, setHasPhoto] = useState(false);
+  const handleImageClick = () => {
+    inputRef.current.click();
+  };
   const getVideo = () => {
     navigator.mediaDevices
       .getUserMedia({
@@ -37,11 +41,13 @@ const Scan = () => {
             Take
           </button>
         </a>
-        <a href="/result">
-          <button className="m-1 border border-white bg-[#BE7656] rounded-lg w-28 py-2 text-lg text-white hover:bg-[#BE7656]/80 hover:text-black">
-            Upload
-          </button>
-        </a>
+        <button
+          onClick={handleImageClick}
+          className="m-1 border border-white bg-[#BE7656] rounded-lg w-28 py-2 text-lg text-white hover:bg-[#BE7656]/80 hover:text-black"
+        >
+          <input type="file" ref={inputRef} style={{ display: "none" }} />
+          Upload
+        </button>
       </div>
     </div>
   );
