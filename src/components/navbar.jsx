@@ -9,10 +9,10 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
+      <div className="max-w-[1640px] max-h-[640px] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-            Coffee Bean <span className="font-bold">Detection</span>
+            Mr. <span className="font-bold">Bean</span>
           </h1>
         </div>
         <div className="hidden lg:flex justify-between font-medium pt-2 mr-5 space-x-10 text-xl">

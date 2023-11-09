@@ -11,7 +11,6 @@ const Information = () => {
     <div>
       <Navbar />
       <InfoHeader />
-      <Featured />
       <Article />
       <Footer />
     </div>

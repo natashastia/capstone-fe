@@ -5,7 +5,7 @@ import photo2 from "../assets/photo-2.jpg";
 function AboutUs() {
   return (
     <div
-      id="section-2"
+      id="section-3"
       name="aboutus"
       className="min-h-screen w-full overflow-hidden flex flex-col justify-between"
     >
