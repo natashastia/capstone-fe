@@ -62,7 +62,6 @@ const Scan = () => {
       };
       reader.readAsDataURL(file);
     } else {
-      // Tampilkan pesan kesalahan jika file yang diunggah bukan gambar
       alert("Silakan unggah gambar yang valid.");
     }
   };
@@ -78,30 +77,32 @@ const Scan = () => {
         <div className="text-black text-4xl font-bold text-center">
           Scan Here
         </div>
-        <div className="camera">
+        <div className="camera my-6">
           <video ref={videoRef}></video>
         </div>
-        <div>
-          <button
-            onClick={takePhoto}
-            className="m-1 border border-white bg-[#BE7656] rounded-lg w-28 py-2 text-lg text-white hover:bg-[#BE7656]/80 hover:text-black"
+        <div className="flex flex-col lg:flex-row">
+          <div>
+            <button
+              onClick={takePhoto}
+              className="m-2 border border-white bg-[#BE7656] rounded-lg w-28 py-2 text-lg text-white hover:bg-[#BE7656]/80 hover:text-black"
+            >
+              Take
+            </button>
+          </div>
+          <label
+            htmlFor="imageUpload"
+            className="m-2 border border-white bg-[#BE7656] rounded-lg w-28 py-2 text-lg text-white text-center hover:bg-[#BE7656]/80 hover:text-black"
           >
-            Take
-          </button>
+            Upload
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              onChange={handleImageUpload}
+              style={{ display: "none" }}
+            />
+          </label>
         </div>
-        <label
-          htmlFor="imageUpload"
-          className="m-1 border border-white bg-[#BE7656] rounded-lg w-28 py-2 text-lg text-white text-center hover:bg-[#BE7656]/80 hover:text-black"
-        >
-          Upload
-          <input
-            type="file"
-            id="imageUpload"
-            accept="image/*"
-            onChange={handleImageUpload}
-            style={{ display: "none" }}
-          />
-        </label>
         <canvas ref={photoRef} style={{ display: "none" }}></canvas>
       </div>
     </div>

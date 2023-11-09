@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="max-w-[1640px] mx-auto">
+    <div className="max-w-screen-xl mx-auto">
       <div className="h-screen relative flex flex-col justify-center text-center items-center">
         <div className="absolute w-full h-full text-gray-200 bg-black/40 flex flex-col justify-center text-center items-center">
           {/*Overlay*/}
