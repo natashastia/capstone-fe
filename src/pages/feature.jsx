@@ -4,7 +4,6 @@ import Worker from "../assets/worker.png";
 import Office from "../assets/office-worker.png";
 import Photo from "../assets/take-a-photo.png";
 import Detection from "../assets/recognition.png";
-import "./feature.css";
 
 const Feature = () => {
   return (
