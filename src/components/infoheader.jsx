@@ -14,7 +14,7 @@ const InfoHeader = () => {
           <div className="w-full lg:w-1/2 p-9 space-x-5 font-medium">
             <p>
               Didirikan oleh sekelompok penggemar kopi dengan cinta mendalam
-              terhadap biji kopi, This lahir dari keinginan untuk meningkatkan
+              terhadap biji kopi, Mr. Bean lahir dari keinginan untuk meningkatkan
               perjalanan kopi bagi setiap penggemar, mulai dari petani hingga
               barista dan pecinta kopi. Dengan komitmen terhadap kualitas dan
               keberlanjutan, kami memulai misi untuk memanfaatkan kekuatan
