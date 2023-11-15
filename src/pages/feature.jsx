@@ -15,12 +15,12 @@ const Feature = () => {
             className="feature-icon"
             alt="Coffee stickers created by paulalee - Flaticon"
           />
-          <h1 className="feature-title">What Is Mr. Bean?</h1>
+          <h1 className="feature-title">Apa Itu Mr. Bean?</h1>
           <p className="feature-description">
-            Mr. Bean is an advanced application designed specifically for coffee
-            enthusiasts. With state-of-the-art technology, this application can
-            detect coffee bean quality, including normal conditions, unusual
-            shapes, unusual colors, and other abnormalities.
+            Mr. Bean adalah aplikasi canggih yang dirancang khusus untuk para
+            penggemar kopi. Dengan teknologi mutakhir, aplikasi ini dapat
+            mendeteksi kualitas biji kopi, termasuk kondisi normal, bentuk yang
+            tidak biasa, warna yang tidak biasa, dan kelainan lainnya.
           </p>
         </div>
       </div>
@@ -31,12 +31,12 @@ const Feature = () => {
             className="feature-icon"
             alt="Coffee stickers created by paulalee - Flaticon"
           />
-          <h1 className="feature-title">Why Mr. Bean?</h1>
+          <h1 className="feature-title">Mengapa Mr. Bean?</h1>
           <p className="feature-description">
-            This application helps you avoid low-quality coffee beans, ensuring
-            you only use the best. With precise detection, you will always find
-            high-quality coffee beans that meet your standards. Never compromise
-            on the taste of your coffee again.
+            Aplikasi ini membantu Anda menghindari biji kopi berkualitas rendah,
+            memastikan Anda hanya menggunakan yang terbaik. Dengan deteksi yang
+            akurat, Anda akan selalu menemukan biji kopi berkualitas tinggi
+            sesuai standar Anda. Jangan pernah mengorbankan rasa kopi Anda lagi.
           </p>
         </div>
       </div>
@@ -47,7 +47,7 @@ const Feature = () => {
             className="feature-icon"
             alt="Coffee stickers created by paulalee - Flaticon"
           />
-          <h1 className="feature-title">How to Use Mr. Bean?</h1>
+          <h1 className="feature-title">Cara Penggunaan Mr. Bean</h1>
           <p className="feature-description">
             <div className="flex items-center">
               <img
@@ -55,10 +55,10 @@ const Feature = () => {
                 className="h-[75px] "
                 alt="Take a pic icons created by Dooder - Flaticon"
               ></img>
-              Take a photo or upload an image of coffee beans.
+              Ambil foto atau unggah gambar biji kopi.
             </div>
             <div className="flex items-center">
-              The identification of the quality of the coffee beans.
+              Identifikasi kualitas biji kopi.
               <img
                 src={Detection}
                 className="h-[75px] "

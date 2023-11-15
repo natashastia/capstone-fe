@@ -7,20 +7,20 @@ const Hero = () => {
         <div className="absolute w-full h-full text-gray-200 bg-black/40 flex flex-col justify-center text-center items-center">
           {/*Overlay*/}
           <h1 className="text-2xl text-4xl md:text-6xl lg:text-7xl font-bold">
-            Coffee <span className="text-[#EFC3A4]"> Bean </span>
+            Sistem <span className="text-[#EFC3A4]"> Pendeteksi </span>
           </h1>
           <h1 className="text-2xl text-4xl md:text-6xl lg:text-7xl font-bold">
-            <span className="text-[#EFC3A4]"> Detection </span> System
+            <span className="text-[#EFC3A4]"> Biji </span> Kopi
           </h1>
           <div className="flex flex-col items-center mt-5 sm:flex-row">
             <a href="/scan">
               <button className="m-1 border border-white bg-[#BE7656]/80 rounded-lg px-9 py-2 text-lg text-white hover:bg-white hover:text-black">
-                Scanning
+                Pindai
               </button>
             </a>
             <a href="/info">
               <button className="m-1 border border-white bg-[#BE7656]/80 rounded-lg px-7 py-2 text-lg text-white hover:bg-white hover:text-black">
-                Information
+                Informasi
               </button>
             </a>
           </div>

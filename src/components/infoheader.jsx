@@ -6,20 +6,20 @@ const InfoHeader = () => {
       <div className="h-screen relative">
         <div className="absolute w-full h-full text-gray-200 bg-black/40 flex flex-col justify-center">
           <h1 className="px-6 text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-            Coffee Bean
+            Sistem Pendeteksi
           </h1>
           <h1 className="px-6 text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-            Detection System
+            Biji Kopi
           </h1>
           <div className="w-full lg:w-1/2 p-9 space-x-5 font-medium">
             <p>
-              Founded by a group of coffee aficionados with a deep-rooted love
-              for the bean, This was born out of a desire to elevate the coffee
-              journey for every enthusiast, from farmers to baristas and coffee
-              lovers. With a commitment to quality and sustainability, we
-              embarked on a mission to harness the power of artificial
-              intelligence and machine learning to enhance the entire coffee
-              bean lifecycle.
+              Didirikan oleh sekelompok penggemar kopi dengan cinta mendalam
+              terhadap biji kopi, This lahir dari keinginan untuk meningkatkan
+              perjalanan kopi bagi setiap penggemar, mulai dari petani hingga
+              barista dan pecinta kopi. Dengan komitmen terhadap kualitas dan
+              keberlanjutan, kami memulai misi untuk memanfaatkan kekuatan
+              kecerdasan buatan dan pembelajaran mesin untuk meningkatkan
+              seluruh siklus hidup biji kopi.
             </p>
           </div>
         </div>
