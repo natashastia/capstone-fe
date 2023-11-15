@@ -32,7 +32,7 @@ const CoffeeQualityClassifier = () => {
       };
 
       const response = await axios.post(
-        "http://10.73.203.43:5000/predict",
+        "http://10.73.224.186:5000/predict",
         formData,
         config
       );
@@ -144,7 +144,7 @@ const CoffeeQualityClassifier = () => {
           </button>
         </div>
       )}
-      <div lassName="flex flex-col lg:flex-row items-center justify-center">
+      <div>
         {detectionDone && uploadedImage && predictions.length > 0 && (
           <div>
             <h2 className="text-center text-black text-2xl font-bold">
