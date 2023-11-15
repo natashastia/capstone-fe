@@ -3,6 +3,7 @@ import Navbar from "../components/navbar.jsx";
 import Hero from "../components/hero.jsx";
 import AboutUs from "./aboutus.jsx";
 import Feature from "./feature.jsx";
+import Footer from "../components/footer.jsx"
 
 function Homepage() {
   return (
@@ -11,6 +12,7 @@ function Homepage() {
       <Hero />
       <Feature />
       <AboutUs />
+      <Footer />
     </div>
   );
 }

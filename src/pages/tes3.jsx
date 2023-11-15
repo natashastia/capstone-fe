@@ -105,14 +105,14 @@ const CoffeeQualityClassifier = () => {
     <div className="text-center max-w-screen mx-auto">
       <Navbar />
       <div className="text-center text-black text-2xl font-bold mt-2">
-        Coffee Bean Detection
+        Sistem Pendeteksi Biji Kopi
       </div>
       {isLoading && <Loading />}
       {/* Conditionally render the photo upload section */}
       {!detectionDone && (
         <div>
           <div className="text-center text-black text-xl mt-2">
-            Upload or Take a Photo here!
+            Unggah atau Ambil Foto di sini!
           </div>
           <div className="w-[375px] h-[375px] lg:w-[500px] lg:h-[500px] mt-4 bg-black mx-auto relative flex items-center justify-center">
             {selectedFile ? (
@@ -123,12 +123,12 @@ const CoffeeQualityClassifier = () => {
               />
             ) : (
               <div className="text-[#D3D3D3] text-center">
-                No photos added yet!
+                Belum ada foto yang ditambahkan.
               </div>
             )}
           </div>
           <label className="text-center inline-flex text-white rounded-lg cursor-pointer mt-5 bg-[#BE7656] px-9 py-2 text-lg hover:bg-[#e8a587] hover:text-black">
-            Add Photo
+            Tambahkan Foto
             <input
               type="file"
               accept="image/*"
@@ -140,7 +140,7 @@ const CoffeeQualityClassifier = () => {
             onClick={handleUpload}
             className="text-center inline-flex text-white rounded-lg cursor-pointer m-2 bg-[#BE7656] px-5 py-2 text-lg hover:bg-[#e8a587] hover:text-black"
           >
-            Start Detection
+            Mulai Deteksi
           </button>
         </div>
       )}
@@ -148,7 +148,7 @@ const CoffeeQualityClassifier = () => {
         {detectionDone && uploadedImage && predictions.length > 0 && (
           <div>
             <h2 className="text-center text-black text-2xl font-bold">
-              Result
+              Hasil
             </h2>
             <div className="flex flex-col lg:flex-row items-center justify-center">
               <div className="result-image">
@@ -159,16 +159,16 @@ const CoffeeQualityClassifier = () => {
                 />
               </div>
               <div className="result-statistics">
-                <h1 className="text-2xl mb-2 font-bold lg:my-3">Statistic</h1>
+                <h1 className="text-2xl mb-2 font-bold lg:my-3">Statistik</h1>
 
                 <h2 className="font-base text-base text-center">
-                  Total Number of Defects: {calculateTotalDefects()}
+                  Jumlah total cacat: {calculateTotalDefects()}
                   <br />
-                  Type of Quality: {getQuality(calculateTotalDefects())}
+                  Jenis kualitas: {getQuality(calculateTotalDefects())}
                 </h2>
                 {processingTime !== null && (
                   <p className="text-base m-1">
-                    Duration: {processingTime.toFixed(2)}s
+                    Durasi: {processingTime.toFixed(2)}s
                   </p>
                 )}
                 <ul className="pl-6 list-disc">
@@ -196,7 +196,7 @@ const CoffeeQualityClassifier = () => {
                     %
                   </li>
                 </ul>
-                <h1 className="text-2xl mb-2 font-bold lg:my-3">Description</h1>
+                <h1 className="text-2xl mb-2 font-bold lg:my-3">Deskripsi</h1>
                 <ul className="pl-6 list-disc">
                   <li>Bentuk Tidak Wajar: Biji Pecah</li>
                   <li>

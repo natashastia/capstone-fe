@@ -14,11 +14,12 @@ function AboutUs() {
           About Us
         </div>
         <div className="w-11/12 md:w-2/3 lg:w-1/2 mt-5 md:mt-10 text-md md:text-xl lg:text-2xl text-center">
-          Hello! We're a group of students from Gadjah Mada University's
-          Electrical Engineering and Information Technology Department, working
-          on our 2023 Capstone project. We're passionate about coffee and
-          technology, and we've created a smart app to help coffee producers and
-          lovers. Our app uses smart technology to find the best coffee beans.
+          Hallo! Kami adalah sekelompok mahasiswa dari Departemen Teknik Elektro
+          dan Teknologi Informasi Universitas Gadjah Mada, yang sedang bekerja
+          pada proyek Capstone kami tahun 2023. Kami memiliki minat yang besar
+          terhadap kopi dan teknologi, dan kami telah menciptakan aplikasi
+          pintar untuk membantu para produsen dan pecinta kopi. Aplikasi kami
+          menggunakan teknologi pintar untuk menemukan biji kopi terbaik.
         </div>
       </div>
       <div className="flex flex-wrap justify-center mt-2">
@@ -36,9 +37,6 @@ function AboutUs() {
             className="w-[250] h-[170px] lg:w-[400px] lg:h-[320px]"
           />
         </div>
-      </div>
-      <div className="bg-[#BE7656] text-white font-medium text-sm md:text-base text-center py-3">
-        © 2023 Capstone B_02 DTETI FT UGM. All Rights Reserved
       </div>
     </div>
   );
