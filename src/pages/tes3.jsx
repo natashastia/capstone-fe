@@ -9,7 +9,8 @@ const CoffeeQualityClassifier = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [detectionDone, setDetectionDone] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [processingTime, setProcessingTime] = useState(null); // Add processingTime state
+  const [processingTime, setProcessingTime] = useState(null);
+  const [error, setError] = useState(null); // Add error state
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -19,12 +20,13 @@ const CoffeeQualityClassifier = () => {
 
   const handleUpload = async () => {
     setIsLoading(true);
+    setError(null); // Reset error state
+
     const start = performance.now();
     try {
       const formData = new FormData();
       formData.append("file", selectedFile);
 
-      //add a content type
       const config = {
         headers: {
           "content-type": "multipart/form-data",
@@ -36,18 +38,27 @@ const CoffeeQualityClassifier = () => {
         formData,
         config
       );
-      console.log(response);
-      // Update state dengan hasil prediksi dan gambar yang sudah diunggah
-      setPredictions(response.data.classifications);
-      setUploadedImage(response.data.image_data);
-      setDetectionDone(true);
+
+      if (
+        !response.data ||
+        !response.data.classifications ||
+        response.data.classifications.length === 0
+      ) {
+        // Set error state if the response is invalid or classifications are empty
+        setError("Error in classification results");
+      } else {
+        setPredictions(response.data.classifications);
+        setUploadedImage(response.data.image_data);
+        setDetectionDone(true);
+      }
     } catch (error) {
       console.error("Error uploading image:", error);
+      setError("Error uploading image");
     } finally {
-      const end = performance.now(); // Stop measuring time
-      const duration = (end - start) / 1000; // Convert to seconds
+      const end = performance.now();
+      const duration = (end - start) / 1000;
       setProcessingTime(duration);
-      setIsLoading(false); // Set loading to false when upload is complete
+      setIsLoading(false);
     }
   };
 
@@ -76,7 +87,7 @@ const CoffeeQualityClassifier = () => {
       const categoryCount = predictions.filter(
         (result) => result === category
       ).length;
-      return (categoryCount / totalDefects) * 100 || 0; // Return 0 if totalDefects is 0 to avoid NaN
+      return (categoryCount / totalDefects) * 100 || 0;
     }
     return 0;
   };
@@ -97,7 +108,7 @@ const CoffeeQualityClassifier = () => {
     } else if (totalDefects <= 225) {
       return "Mutu 6";
     } else {
-      return "Mutu tidak terdefinisi"; // Atau sesuai dengan kebutuhan Anda
+      return "Mutu tidak terdefinisi";
     }
   };
 
@@ -108,7 +119,6 @@ const CoffeeQualityClassifier = () => {
         Sistem Pendeteksi Biji Kopi
       </div>
       {isLoading && <Loading />}
-      {/* Conditionally render the photo upload section */}
       {!detectionDone && (
         <div>
           <div className="text-center text-black text-xl mt-2">
@@ -133,7 +143,7 @@ const CoffeeQualityClassifier = () => {
               type="file"
               accept="image/*"
               onChange={handleFileChange}
-              className="hidden" // Menggunakan kelas 'hidden' untuk menyembunyikan input asli
+              className="hidden"
             />
           </label>
           <button
@@ -147,9 +157,7 @@ const CoffeeQualityClassifier = () => {
       <div>
         {detectionDone && uploadedImage && predictions.length > 0 && (
           <div>
-            <h2 className="text-center text-black text-2xl font-bold">
-              Hasil
-            </h2>
+            <h2 className="text-center text-black text-2xl font-bold">Hasil</h2>
             <div className="flex flex-col lg:flex-row items-center justify-center">
               <div className="result-image">
                 <img
